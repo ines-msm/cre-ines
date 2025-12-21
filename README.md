@@ -16,8 +16,6 @@ The project demonstrates API test automation (REST) and web UI test automation, 
 - JavaScript
 - Node.js
 
----
-
 ## 📦 Installing dependencies
 
 ### Prerequisites
@@ -36,14 +34,12 @@ npx playwright show-report ../reports/api-report
 ```
 
 ### UI Tests
----
+UI test automation is currently in progress and will be added to this repository.
 
 ## ⚙️ Test data configuration
 
 No additional configuration is required.
 The tests use mock data / public endpoints.
-
----
 
 ## 📎 Reference
 
