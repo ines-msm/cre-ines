@@ -1,0 +1,25 @@
+{
+  "name": "crud-livros-expandido",
+  "version": "2.0.0",
+  "description": "Sistema completo de gerenciamento de livros com autenticação",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test:api": "playwright test tests/api",
+    "test:ui": "cypress run",
+    "test": "npm run test:api"
+  },
+  "keywords": [],
+  "author": "Bruno Figueiredo - Mestre QA",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "cypress": "^15.8.0"
+  }
+}
