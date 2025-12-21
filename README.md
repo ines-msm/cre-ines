@@ -23,11 +23,11 @@
 ### API Tests
 ```bash
 cd api-tests/tests
-Install deps (if needed):
+# Install dependencies
 npm install
-Run tests with temp config:
+# Run tests with temp config:
 npx playwright test --config=playwright.local.config.js
-View report:
+# View report:
 npx playwright show-report ..\reports\api-report
 ```
 ---
