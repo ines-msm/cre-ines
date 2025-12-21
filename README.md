@@ -1,4 +1,11 @@
-# QA Automation Final Project
+## Overview
+
+This repository contains the final automation project developed for the Rumos Expert Certification (CRE) – Test Automation Engineer, based on the Library System (CRE Version)
+
+The project demonstrates API test automation (REST) and web UI test automation, including integration scenarios, business rule validation, user roles (Student, Staff, Admin), and error handling. The solution is structured with a focus on clean architecture, reusability, and readability, and includes clear documentation and execution reports with test evidence.
+
+Original reference repository:
+https://github.com/brunonf15/biblioteca-pro-max.git
 
 ## 📌 Stack used
 
