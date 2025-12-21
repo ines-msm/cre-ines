@@ -29,3 +29,8 @@ Run tests with temp config:
 npx playwright test --config=playwright.local.config.js
 View report:
 npx playwright show-report ..\reports\api-report
+
+---
+
+No additional configuration is required.
+The tests use mock data / public endpoints.
