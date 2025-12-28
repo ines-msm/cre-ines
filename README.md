@@ -1,44 +1,63 @@
 ## 📘 Overview
 
-This repository contains the final automation project developed for the Rumos Expert Certification (CRE) – Test Automation Engineer, based on the Library System (CRE version).
+This repository contains the final automation project developed for the **Rumos Expert Certification (CRE) – Test Automation Engineer**, based on the Library System (CRE version).
 
-The project demonstrates API test automation (REST) and web UI test automation, including integration scenarios, business rule validation, user roles (Student, Staff, Admin), and error handling. The solution is structured with a focus on clean architecture, reusability, and readability, and includes clear documentation and execution reports with test evidence.
+The project demonstrates a comprehensive testing strategy covering:
+* **API Test Automation (REST):** Validating endpoints, business rules, and integration.
+* **Web UI Test Automation:** E2E scenarios including user roles (Student, Staff, Admin) and error handling.
+* **Clean Architecture:** Focus on the Page Object Model (POM), Service Layer patterns, and reusability.
 
 ## 📌 Stack used
 
 ### API Tests
-- Playwright
-- TypeScript
-- Node.js
+- **Framework:** Playwright
+- **Language:** JavaScript/Node.js
+- **Reporting:** Playwright HTML Reporter
 
 ### UI Tests
-- Cypress
-- JavaScript
-- Node.js
+- **Framework:** Cypress
+- **Language:** JavaScript/Node.js
+- **Reporting:** Mochawesome
 
-## 📦 Installing dependencies
+## 📦 Getting Started
 
 ### Prerequisites
 - Node.js (>= 18)
 - npm
 
-### API Tests
+### Installation & Setup
 ```bash
-# Install dependencies
+1. **Clone the repository:**
+   
+   git clone [https://github.com/ines-msm/cre-ines.git](https://github.com/ines-msm/cre-ines.git)
+   cd cre-ines
+
+2. **Install all dependencies:**
 npm install
+
+3. **Start the local server:**
+npm start
+```
+
+* Web App: http://localhost:3000/login.html
+* Swagger UI: http://localhost:3000/api-docs
+
+## 🚀 Running Tests
+
+**API Tests (Playwright)**
+
+```bash
 # Run tests 
 npm run test:api
-# View report:
+# View report
 npm run report:api
 ```
 
-### UI Tests
+**UI Tests (Cypress)**
 ```bash
-# Install dependencies
-npm install
-npx cypress install
-npm install --save-dev cypress-mochawesome-reporter
-# Run tests
+# Open Cypress Test Runner
+npx cypress open
+# Run tests in headless mode
 npm run test:ui:run
 # View report
 npm run report:ui
@@ -48,54 +67,36 @@ npm run report:ui
 
 ```bash
 CRE-INES/
-├── api-tests/                # API Testing Suite (Playwright/Node.js)
-│   ├── reports/              # HTML execution reports for API tests
+├── api-tests/                # API Testing Suite (Playwright)
+│   ├── reports/              # Execution reports
 │   └── tests/
-│       ├── clients/          # API Client configurations (base axios/fetch setup)
-│       │   └── APIClient.js
+│       ├── clients/          # API Client configurations
 │       ├── objects/          # Data objects and payloads
-│       │   └── APIObjects.js
-│       ├── services/         # Business logic layer for API endpoints
-│       │   ├── AuthService.js
-│       │   ├── BookService.js
-│       │   └── ... (Favorite, Lease, Purchase, etc.)
-│       └── api.spec.js       # Main API test execution file
+│       ├── services/         # Business logic layer (Auth, Book, etc.)
+│       └── api.spec.js       # Main test execution
 ├── cypress/                  # UI Testing Suite (Cypress)
-│   ├── e2e/                  # End-to-End test specifications (.spec.js)
-│   │   ├── admin.spec.js
-│   │   ├── books.spec.js
-│   │   └── login.spec.js
-│   ├── fixtures/             # Static data (mock JSON files)
-│   │   └── example.json
+│   ├── e2e/                  # End-to-End test specifications
+│   ├── fixtures/             # Static mock data
 │   ├── page-objects/         # Page Object Model (POM) classes
-│   │   ├── LoginPage.js
-│   │   ├── BooksPage.js
-│   │   └── ...
-│   ├── reports/              # UI test execution reports
-│   ├── screenshots/          # Automatically captured on test failure
-│   ├── services/             # Specialized UI helper services (Storage, Nav)
-│   └── support/              # Global configuration and custom commands
-│       ├── commands.js
-│       └── e2e.js
-├── node_modules/             # Project dependencies
-├── cypress.config.cjs        # Cypress configuration file
-├── playwright.config.js      # Playwright configuration file
-├── package.json              # Scripts and project dependencies
+│   ├── services/             # UI helper services (Storage, Nav)
+│   └── support/              # Global config and custom commands
+├── cypress.config.cjs        # Cypress configuration
+├── playwright.config.js      # Playwright configuration
+├── package.json              # Scripts and dependencies
 └── README.md                 # Project documentation
 ```
 
-## ⚙️ Test data configuration
+## ⚙️ Test Data & Configuration
 
-No additional configuration is required.
-The tests use mock data / public endpoints.
+The project is configured to run against the local environment by default. It uses a combination of dynamic test data and static fixtures located in cypress/fixtures. No external database setup is required as the server handles data in-memory/locally.
 
 ## 📎 Reference
 
-This project is based on the Library System provided by the course instructor as part of the Rumos Expert Certification (CRE).
+This project is part of the Rumos Expert Certification (CRE).
 
 Original reference repository:
 https://github.com/brunonf15/biblioteca-pro-max.git
 
 ## 🤖 AI Support
 
-During the development of the automation tests for this project, AI-assisted tools (e.g., GitHub Copilot, ChatGPT, Google Gemini) were occasionally used to support code suggestions, clarify concepts, and improve documentation. All test implementations and related decisions were authored and reviewed by the candidate.
+AI-assisted tools (GitHub Copilot, ChatGPT) were used during development for code optimization, concept clarification, and documentation enhancement. All final implementations were reviewed and verified by the author.
