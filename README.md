@@ -44,6 +44,46 @@ npm run test:ui:run
 npm run report:ui
 ```
 
+## 📁 Project Structure
+
+```bash
+CRE-INES/
+├── api-tests/                # API Testing Suite (Playwright/Node.js)
+│   ├── reports/              # HTML execution reports for API tests
+│   └── tests/
+│       ├── clients/          # API Client configurations (base axios/fetch setup)
+│       │   └── APIClient.js
+│       ├── objects/          # Data objects and payloads
+│       │   └── APIObjects.js
+│       ├── services/         # Business logic layer for API endpoints
+│       │   ├── AuthService.js
+│       │   ├── BookService.js
+│       │   └── ... (Favorite, Lease, Purchase, etc.)
+│       └── api.spec.js       # Main API test execution file
+├── cypress/                  # UI Testing Suite (Cypress)
+│   ├── e2e/                  # End-to-End test specifications (.spec.js)
+│   │   ├── admin.spec.js
+│   │   ├── books.spec.js
+│   │   └── login.spec.js
+│   ├── fixtures/             # Static data (mock JSON files)
+│   │   └── example.json
+│   ├── page-objects/         # Page Object Model (POM) classes
+│   │   ├── LoginPage.js
+│   │   ├── BooksPage.js
+│   │   └── ...
+│   ├── reports/              # UI test execution reports
+│   ├── screenshots/          # Automatically captured on test failure
+│   ├── services/             # Specialized UI helper services (Storage, Nav)
+│   └── support/              # Global configuration and custom commands
+│       ├── commands.js
+│       └── e2e.js
+├── node_modules/             # Project dependencies
+├── cypress.config.cjs        # Cypress configuration file
+├── playwright.config.js      # Playwright configuration file
+├── package.json              # Scripts and project dependencies
+└── README.md                 # Project documentation
+```
+
 ## ⚙️ Test data configuration
 
 No additional configuration is required.
