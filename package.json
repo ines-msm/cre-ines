@@ -1,0 +1,30 @@
+{
+  "name": "academia-qa-completo",
+  "version": "2.0.0",
+  "description": "Projeto unificado: API (Playwright) e UI (Cypress)",
+  "type": "module",
+  "main": "api-tests/server.js",
+ "scripts": {
+  "start": "node api-tests/server.js",
+  "test:api": "npx playwright test",
+  "test:ui:run": "cypress run --browser electron",
+  "test:ui:open": "cypress open",
+  "test:all": "npm run test:api && npm run test:ui:run",
+  "report:api": "npx playwright show-report api-tests/reports/api-report",
+  "report:ui": "start cypress/reports/index.html"
+},
+
+  "author": "Bruno Figueiredo - Mestre QA",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "cypress": "^13.0.0",
+    "cypress-mochawesome-reporter": "^3.8.4"
+  }
+}
