@@ -44,7 +44,7 @@ describe('UI - Books Page', () => {
   // --- STUDENT ACTIONS ---
   describe('Student - Book Interactions', () => {
     beforeEach(() => {
-      loginPage.navigate().login('usertestes@email.com', 'senha123').verifyLoginSuccess();
+      loginPage.navigate().login('aluna@teste.com', '123456').verifyLoginSuccess();
       navigationService.navigateTo('/livros.html');
     });
 

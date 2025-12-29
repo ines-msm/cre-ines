@@ -20,7 +20,7 @@ describe('UI - Route Protection and Navigation', () => {
   it('CT-FE-006 - Validate menu items for Student', () => {
     loginPage
       .navigate()
-      .login('usertestes@email.com', 'senha123')
+      .login('aluna@teste.com', '123456')
       .verifyLoginSuccess();
 
     cy.wait(2000);
@@ -95,7 +95,7 @@ describe('UI - Dashboard Statistics', () => {
   it('CT-FE-009 - Verify dashboard statistics for Student', () => {
     loginPage
       .navigate()
-      .login('usertestes@email.com', 'senha123')
+      .login('aluna@teste.com', '123456')
       .verifyLoginSuccess();
 
     navigationService.verifyCurrentPage('/dashboard.html');

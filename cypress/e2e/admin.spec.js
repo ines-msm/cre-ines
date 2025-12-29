@@ -18,7 +18,7 @@ describe('UI - User Administration', () => {
       userPage.verifyAdminAreaVisible(); 
 
       cy.contains('button', 'Sair').click(); 
-      loginPage.login('usertestes@email.com', 'senha123').verifyLoginSuccess();
+      loginPage.login('aluna@teste.com', '123456').verifyLoginSuccess();
       
       cy.visit('/admin-usuarios.html', { failOnStatusCode: false });
       cy.get('body').contains(/Somente administradores podem acessar esta página./).should('be.visible');

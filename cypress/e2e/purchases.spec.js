@@ -24,7 +24,7 @@ describe('UI - Book Purchases', () => {
     });
     userPage.logout();
 
-    loginPage.navigate().login('usertestes@email.com', 'senha123');
+    loginPage.navigate().login('ualuna@teste.com', '123456');
     cy.visit('/compras.html');
     
     cy.get('#lista-livros-compra .book-card').first().within(() => {
@@ -43,7 +43,7 @@ describe('UI - Book Purchases', () => {
   });
 
   it('CT-FE-019 - Approve a Purchase (Admin)', () => {
-    loginPage.navigate().login('usertestes@email.com', 'senha123');
+    loginPage.navigate().login('aluna@teste.com', '123456');
     cy.visit('/compras.html');
     
     cy.get('#lista-livros-compra .book-card').first().within(() => {

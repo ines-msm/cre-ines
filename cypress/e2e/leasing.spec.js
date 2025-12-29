@@ -33,7 +33,7 @@ describe('UI - Book Leasing Flow (Student and Admin)', () => {
     userPage.logout();
 
     // ACTION: Student logs in and requests the lease
-    loginPage.navigate().login('usertestes@email.com', 'senha123');
+    loginPage.navigate().login('aluna@teste.com', '123456');
     // Using leaseBook which visits /arrendamentos.html
     booksPage.leaseBook('2026-01-10', '2026-01-20', uniqueTitle);
     
@@ -62,7 +62,7 @@ describe('UI - Book Leasing Flow (Student and Admin)', () => {
     userPage.logout();
 
     // ACTION: Student creates the pending request
-    loginPage.navigate().login('usertestes@email.com', 'senha123');
+    loginPage.navigate().login('aluna@teste.com', '123456');
     booksPage.leaseBook('2026-02-01', '2026-02-15', leaseTitle);
     userPage.logout();
 
