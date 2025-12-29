@@ -26,16 +26,18 @@ The project demonstrates a comprehensive testing strategy covering:
 - npm
 
 ### Installation & Setup
-```bash
+
 1. **Clone the repository:**
-   
-   git clone [https://github.com/ines-msm/cre-ines.git](https://github.com/ines-msm/cre-ines.git)
-   cd cre-ines
-
+```bash  
+git clone https://github.com/ines-msm/cre-ines.git
+cd cre-ines
+```
 2. **Install all dependencies:**
+```bash 
 npm install
-
+```
 3. **Start the local server:**
+```bash 
 npm start
 ```
 
