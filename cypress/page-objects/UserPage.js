@@ -40,7 +40,6 @@ export class UserPage {
         this.emailInput.clear().type(userData.email);
         this.passwordInput.clear().type(userData.password);
 
-        // Ajuste para garantir que o select funcione mesmo se o valor for diferente do texto
         this.roleSelect.select(userData.role);
 
         this.submitButton.click();
@@ -70,7 +69,6 @@ export class UserPage {
             if (txt.includes('excluído')) expect(txt).to.equal('Usuário excluído com sucesso!');
         });
 
-        // Seleção robusta baseada no valor do input de e-mail
         this.userTable.find('input[data-campo="email"]').filter((i, el) => el.value === email)
             .parents('tr')
             .within(() => {
