@@ -24,7 +24,7 @@ describe('UI - Book Purchases', () => {
     });
     userPage.logout();
 
-    loginPage.navigate().login('ualuna@teste.com', '123456');
+    loginPage.navigate().login('aluna@teste.com', '123456');
     cy.visit('/compras.html');
     
     cy.get('#lista-livros-compra .book-card').first().within(() => {
