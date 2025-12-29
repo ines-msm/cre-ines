@@ -25,6 +25,14 @@ The project demonstrates a comprehensive testing strategy covering:
 - Node.js (>= 18)
 - npm
 
+* This automation project requires the application server to be running locally.
+Clone the original application repository (link below).
+Follow the instructions in that repository to start the server.
+Ensure the following links are accessible:
+
+* Web App: http://localhost:3000/login.html
+* Swagger UI: http://localhost:3000/api-docs
+
 ### Installation & Setup
 
 1. **Clone the repository:**
@@ -35,14 +43,9 @@ cd cre-ines
 2. **Install all dependencies:**
 ```bash 
 npm install
+# Also install Playwright browsers for API tests
+npx playwright install
 ```
-3. **Start the local server:**
-```bash 
-npm start
-```
-
-* Web App: http://localhost:3000/login.html
-* Swagger UI: http://localhost:3000/api-docs
 
 ## 🚀 Running Tests
 
