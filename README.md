@@ -25,11 +25,10 @@ The project demonstrates a comprehensive testing strategy covering:
 - Node.js (>= 18)
 - npm
 
-* This automation project requires the application server to be running locally.
-Clone the original application repository (link below).
-Follow the instructions in that repository to start the server.
-Ensure the following links are accessible:
-
+**This automation project requires the application server to be running locally.**
+1. Clone the original application repository (link below).
+2. Follow the instructions in that repository to start the server.
+3. Ensure the following links are accessible:
 * Web App: http://localhost:3000/login.html
 * Swagger UI: http://localhost:3000/api-docs
 
